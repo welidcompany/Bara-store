@@ -129,6 +129,11 @@
                 orders.push({ name, product, price, proof: reader.result });
                 localStorage.setItem('orders', JSON.stringify(orders));
                 alert("تم إرسال الطلب بنجاح!");
+                <label for="whatsapp">رقم الواتساب:</label>
+<input type="text" id="whatsapp" name="whatsapp" placeholder="أدخل رقم الواتساب" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+
+<label for="quantity">الكمية:</label>
+<input type="number" id="quantity" name="quantity" placeholder="أدخل الكمية" min="1" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
                 document.getElementById('buyForm').style.display = 'none';
             };
             reader.readAsDataURL(proof);
